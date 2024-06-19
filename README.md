@@ -1,10 +1,41 @@
 # CS 181R: Mobile Robotics
 
+The goal is to create a course that is interactive and engaging.
+
+## Development
+
+The course book (this website) is built using [Quarto](https://quarto.org/). Here are the important bits:
+
+- Non-Quarto files
+  - `_arduino/`: code for the course robot
+  - `_interactives/`: libraries for "interactives"
+  - `_static/`: static web pages not process by Quarto
+- Quarto files
+  - `_quarto.yml`: Quarto configuration file
+  - `index.qmd`: course home page
+  - `book/`: book chapters written in Quarto's qmd format
+  - `pages/`: website pages written in Quarto's qmd format (schedule)
+
+### Dependencies
+
+- [Quarto](https://quarto.org/)
+- [quarto-vscode](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+- Additional dependencies listed in `_interactives/README.md`
+
+### Book Chapters
+
+Create and edit files in the `book` directory. Take a look at the `book/_template.qmd` file to see how to structure a chapter.
+
+### Interactives
+
+I like Bret Victor's take on interactive diagrams. Read is article [Up and Down the Ladder of Abstraction](https://worrydream.com/LadderOfAbstraction/) for more information.
+
+Read the `_interactives/README.md` file for more information on creating interactives.
+
 ## TODO
 
-- add goat counter to base template
+- add goat counter to base template (probably no)
 - add hover/link for definitions and acronyms (glossary: see below)
-
 
 ### File
 
@@ -70,12 +101,6 @@ https://spectrum.ieee.org/special-reports/chip-hall-of-fame/
 https://github.com/ros-planning/navigation2/tree/main/nav2_mppi_controller
 
 
-## Course Format
-
-1. "Read" chapter before class (watch videos, read material, annotate with questions)
-2. Complete quiz at beginning of class (can use "drawing log")
-3. Open discussion of material
-4. Hands-on exercise (use Sheet for help)
 
 ## Automatic Glossary
 
@@ -131,6 +156,7 @@ https://github.com/ros-planning/navigation2/tree/main/nav2_mppi_controller
 
 ## Ideas
 
+- No copying-pasting code from website (provide code as... file? repo?)
 - Observable examples: [Player / oscar6echo](https://observablehq.com/@oscar6echo/player)
 - Interactives ideas: [Interactive Visualizations](https://dash.plotly.com/julia/interactive-graphing)
 - Go into motor dynamics: [Build a Simple Electric Motor](https://www.youtube.com/watch?v=WI0pGk0MMhg)
@@ -153,6 +179,22 @@ https://github.com/ros-planning/navigation2/tree/main/nav2_mppi_controller
 - [color mode for plots](https://observablehq.com/framework/themes#auto-mode)
 - prescript: `$\newcommand{\Map}[2]{{\vphantom{{#2}}}^{#1}{#2}}$speed`
 - visualize least squares (two objectives (lecture 8 lds, boyd, 14m) adjust mu)
+- get board name `❯ cat packages/esp32/hardware/esp32/2.0.16/boards.txt | rg -i xiao` (XIAO_ESP32S3.name=XIAO_ESP32S3)
+- [Rotary Encoder: Immediately Tame your Noisy Encoder!](https://www.best-microcontroller-projects.com/rotary-encoder.html)
+
+Bluetooth
+- [Status](https://github.com/WebBluetoothCG/web-bluetooth/blob/main/implementation-status.md)
+- [Guide](https://randomnerdtutorials.com/esp32-bluetooth-low-energy-ble-arduino-ide/)
+- [OTA](https://learn.sparkfun.com/tutorials/esp32-ota-updates-over-ble-from-a-react-web-application/all)
+- [NimBLE](https://github.com/h2zero/NimBLE-Arduino)
+- [Types](https://www.npmjs.com/package/@types/web-bluetooth)
+- [WebBluetooth](https://googlechrome.github.io/samples/web-bluetooth/)
+- [Mobile App](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-mobile)
+- [Spec](https://www.bluetooth.com/specifications/specs/)
+- [Webble for iOS](https://www.greenparksoftware.co.uk/projects/webble/1.2.3)
+- [Bluefy for iOS](https://apps.apple.com/us/app/bluefy-web-ble-browser/id1492822055)
+- [Speed](https://en.wikipedia.org/wiki/Bluetooth_Low_Energy#Technical_details)
+
 
 
 ## Resources
